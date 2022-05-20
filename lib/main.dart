@@ -31,7 +31,21 @@ class AAA extends StatelessWidget {
       ),
       backgroundColor: Colors.green[100],
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.purple, width: 2),
+            ),
+            child: Row(
+              // mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(width: 50, height: 50, color: Colors.red),
+                Container(width: 50, height: 50, color: Colors.blue),
+              ],
+            ),
+          ),
           SizedBox(height: 100),
           Container(
             constraints: const BoxConstraints(
@@ -122,6 +136,26 @@ class AAA extends StatelessWidget {
         Container(width: _width, height: _height, color: Colors.purple),
         Container(width: _width, height: _height, color: Colors.grey),
         Container(width: _width, height: _height, color: Colors.teal),
+        Container(width: _width, height: _height, color: Colors.red),
+        Container(width: _width, height: _height, color: Colors.purpleAccent[100]),
+      ],
+    );
+  }
+
+  Widget containers2() {
+    double _width = 100;
+    double _height = 100;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(width: _width, height: _height, color: Colors.amber),
+        Container(width: _width, height: _height, color: Colors.black),
+        Container(width: _width, height: _height, color: Colors.blue),
+        Container(width: _width, height: _height, color: Colors.yellow),
+        // Container(width: _width, height: _height, color: Colors.green),
+        // Container(width: _width, height: _height, color: Colors.purple),
+        // Container(width: _width, height: _height, color: Colors.grey),
+        // Container(width: _width, height: _height, color: Colors.teal),
         Container(width: _width, height: _height, color: Colors.red),
         Container(width: _width, height: _height, color: Colors.purpleAccent[100]),
       ],
