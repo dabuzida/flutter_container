@@ -92,6 +92,7 @@ class AAA extends StatelessWidget {
           ),
           SizedBox(height: 100),
           containers(),
+          containers3(),
           /* Row(
             children: [
               Container(
@@ -156,6 +157,30 @@ class AAA extends StatelessWidget {
         // Container(width: _width, height: _height, color: Colors.purple),
         // Container(width: _width, height: _height, color: Colors.grey),
         // Container(width: _width, height: _height, color: Colors.teal),
+        Container(width: _width, height: _height, color: Colors.red),
+        Container(width: _width, height: _height, color: Colors.purpleAccent[100]),
+      ],
+    );
+  }
+
+  Widget containers3() {
+    double _width = 100;
+    double _height = 100;
+    return Row(
+      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(
+          width: _width,
+          height: _height,
+          decoration: BoxDecoration(border: Border.all(color: Colors.red, width: 10), color: Colors.amber),
+        ),
+        Container(width: _width, height: _height, color: Colors.black),
+        Container(width: _width, height: _height, color: Colors.blue[200]),
+        Container(width: _width, height: _height, color: Colors.yellow),
+        Container(width: _width, height: _height, color: Colors.green),
+        Container(width: _width, height: _height, color: Colors.purple),
+        Container(width: _width, height: _height, color: Colors.grey),
+        Container(width: _width, height: _height, color: Colors.teal),
         Container(width: _width, height: _height, color: Colors.red),
         Container(width: _width, height: _height, color: Colors.purpleAccent[100]),
       ],
