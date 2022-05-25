@@ -10,8 +10,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Container',
-      home: AAA(),
+      title: 'RenderBox',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('RenderBox'),
+          elevation: 0,
+          foregroundColor: Colors.cyanAccent,
+          backgroundColor: Colors.black,
+          centerTitle: true,
+        ),
+        backgroundColor: Colors.greenAccent[100],
+        body: const AAA(),
+      ),
     );
   }
 }
@@ -21,79 +31,70 @@ class AAA extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Container'),
-        elevation: 0,
-        foregroundColor: Colors.cyanAccent,
-        backgroundColor: Colors.black,
-        centerTitle: true,
-      ),
-      backgroundColor: Colors.green[100],
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.purple, width: 2),
-            ),
-            child: Row(
-              // mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(width: 50, height: 50, color: Colors.red),
-                Container(width: 50, height: 50, color: Colors.blue),
-              ],
-            ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.purple, width: 2),
           ),
-          SizedBox(height: 100),
-          Container(
-            constraints: const BoxConstraints(
-              maxWidth: 700,
-              minWidth: 100,
-              maxHeight: 22,
-              minHeight: 11,
-            ),
-            height: 100,
-            // width: MediaQuery.of(context).size.width - 100, // padding: EdgeInsets.symmetric(horizontal: 30),
-            decoration: BoxDecoration(
-              // color: Colors.blue[900],
-              border: Border.all(color: Colors.yellow, width: 5),
-            ),
-            // child: Container(color: Colors.grey),
+          child: Row(
+            // mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(width: 50, height: 50, color: Colors.red),
+              Container(width: 50, height: 50, color: Colors.blue),
+            ],
           ),
-          Container(
+        ),
+        SizedBox(height: 100),
+        Container(
+          constraints: const BoxConstraints(
+            maxWidth: 700,
+            minWidth: 100,
+            maxHeight: 22,
+            minHeight: 11,
+          ),
+          height: 100,
+          // width: MediaQuery.of(context).size.width - 100, // padding: EdgeInsets.symmetric(horizontal: 30),
+          decoration: BoxDecoration(
+            // color: Colors.blue[900],
+            border: Border.all(color: Colors.yellow, width: 5),
+          ),
+          // child: Container(color: Colors.grey),
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            border: Border(top: BorderSide(color: Colors.black, width: 5.0)),
+          ),
+          child: Container(
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-              border: Border(top: BorderSide(color: Colors.black, width: 5.0)),
-            ),
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  border: Border(
-                top: BorderSide(color: Colors.blue, width: 5.0),
-              )),
-            ),
+                border: Border(
+              top: BorderSide(color: Colors.blue, width: 5.0),
+            )),
           ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.amber, width: 5),
-            ),
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.amber, width: 5),
           ),
-          ConstrainedBox(
-            constraints: BoxConstraints(
-              maxHeight: 300,
-              minHeight: 100,
-              maxWidth: 700,
-              minWidth: 500,
-            ),
-            child: Container(color: Colors.green),
+        ),
+        ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: 300,
+            minHeight: 100,
+            maxWidth: 700,
+            minWidth: 500,
           ),
-          SizedBox(height: 100),
-          containers(),
-          containers3(),
-          /* Row(
+          child: Container(color: Colors.green),
+        ),
+        SizedBox(height: 100),
+        containers(),
+        containers3(),
+        /* Row(
             children: [
               Container(
                 // width: 300,
@@ -118,8 +119,7 @@ class AAA extends StatelessWidget {
               )
             ],
           ), */
-        ],
-      ),
+      ],
     );
   }
 
