@@ -20,15 +20,17 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
         ),
         backgroundColor: Colors.greenAccent[100],
-        body: const AAA(),
+        body: ConditionalStatementInChildOrChildren(),
+        // body: AAA(),
       ),
     );
   }
 }
 
 class AAA extends StatelessWidget {
-  const AAA({Key? key}) : super(key: key);
+  AAA({Key? key}) : super(key: key);
 
+  bool xx = true;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -39,13 +41,14 @@ class AAA extends StatelessWidget {
           decoration: BoxDecoration(
             border: Border.all(color: Colors.purple, width: 2),
           ),
-          child: Row(
-            // mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(width: 50, height: 50, color: Colors.red),
-              Container(width: 50, height: 50, color: Colors.blue),
-            ],
-          ),
+          child: (() {
+            if (xx) {
+              return Container(width: 50, height: 50, color: Colors.amber);
+            } else {
+              return Container(width: 50, height: 50, color: Colors.teal);
+            }
+          }()),
+          // child: xx ? Text('sdf') : Text('sdfsdf333'),
         ),
         SizedBox(height: 100),
         Container(
@@ -184,6 +187,78 @@ class AAA extends StatelessWidget {
         Container(width: _width, height: _height, color: Colors.red),
         Container(width: _width, height: _height, color: Colors.purpleAccent[100]),
       ],
+    );
+  }
+}
+
+// Container같은 child 혹은 Column같은 children에 조건문을 사용시 사용 문법
+class ConditionalStatementInChildOrChildren extends StatefulWidget {
+  const ConditionalStatementInChildOrChildren({Key? key}) : super(key: key);
+
+  @override
+  State<ConditionalStatementInChildOrChildren> createState() => _ConditionalStatementInChildOrChildrenState();
+}
+
+class _ConditionalStatementInChildOrChildrenState extends State<ConditionalStatementInChildOrChildren> {
+  bool _toggle = true;
+  final Color _toggleOnColor = Colors.indigo;
+  final Color _toggleOffColor = Colors.yellow[900]!;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 700,
+        height: 700,
+        color: Colors.teal,
+        child: Column(
+          children: <Widget>[
+            // 1 삼항연산자 o
+            _toggle ? Container(width: 100, height: 100, color: _toggleOnColor) : Container(width: 100, height: 100, color: _toggleOffColor),
+            SizedBox(height: 10),
+            // 2 if-else o
+            if (_toggle) Container(width: 100, height: 100, color: _toggleOnColor) else Container(width: 100, height: 100, color: _toggleOffColor),
+            SizedBox(height: 10),
+            // 3 if-else 변형 o
+            (() {
+              if (_toggle) {
+                return Container(width: 100, height: 100, color: _toggleOnColor);
+              } else {
+                return Container(width: 100, height: 100, color: _toggleOffColor);
+              }
+            }()),
+            SizedBox(height: 10),
+
+            Container(
+              // 4 삼항연산자 o
+              // child: toggle ? Container(width: 100, height: 100, color: _toggleOnColor) : Container(width: 100, height: 100, color: _toggleOffColor),
+              // 5 if-else x
+              // child: if (toggle) Container(width: 100, height: 100, color: _toggleOnColor) else Container(width: 100, height: 100, color: _toggleOffColor),
+              // 6 if-else 변형 o
+              child: (() {
+                if (_toggle) {
+                  return Container(width: 100, height: 100, color: _toggleOnColor);
+                } else {
+                  return Container(width: 100, height: 100, color: _toggleOffColor);
+                }
+              }()),
+            ),
+            SizedBox(height: 10),
+            Container(
+              width: 300,
+              height: 100,
+              color: Colors.amber,
+              child: TextButton(
+                  onPressed: () {
+                    setState(() {
+                      _toggle = !_toggle;
+                    });
+                  },
+                  child: const Text('toggle')),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
