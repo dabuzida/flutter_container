@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_container/container1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,20 +10,29 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Container',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Container'),
-          elevation: 0,
-          foregroundColor: Colors.cyanAccent,
-          backgroundColor: Colors.black,
-          centerTitle: true,
-        ),
-        backgroundColor: Colors.greenAccent[100],
-        body: ConditionalStatementInChildOrChildren(),
-        // body: AAA(),
+      home: MyContainer(),
+    );
+  }
+}
+
+class MyContainer extends StatelessWidget {
+  const MyContainer({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Container'),
+        elevation: 0,
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.teal,
+        centerTitle: true,
       ),
+      body: const Container1(),
+      // body: ConditionalStatementInChildOrChildren(),
+      // body: AAA(),
     );
   }
 }
