@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/rendering.dart';
 
-class Container1 extends StatefulWidget {
-  const Container1({Key? key}) : super(key: key);
+class Containerr extends StatefulWidget {
+  const Containerr({Key? key}) : super(key: key);
 
   @override
-  State<Container1> createState() => _Container1State();
+  State<Containerr> createState() => _ContainerrState();
 }
 
-class _Container1State extends State<Container1> {
+class _ContainerrState extends State<Containerr> {
   Color x = Colors.green;
   Color y = Colors.red;
   Color? z;
@@ -19,11 +18,17 @@ class _Container1State extends State<Container1> {
     z = x;
   }
 
+  void _x() {
+    print('ddd');
+  }
+
   @override
   Widget build(BuildContext context) {
+    print('build5');
     return Center(
       child: GestureDetector(
         onTap: () {
+          _x();
           if (z == x) {
             z = y;
           } else {
@@ -35,8 +40,11 @@ class _Container1State extends State<Container1> {
           // cursor: SystemMouseCursors.click,
           cursor: MouseCursor.defer,
           child: Container(
-            width: 300,
-            height: 300,
+            width: MediaQuery.of(context).size.width,
+            constraints: BoxConstraints(
+              minWidth: 200,
+              maxWidth: 800,
+            ),
             decoration: BoxDecoration(
               border: Border.all(
                 color: Colors.green,
@@ -46,7 +54,6 @@ class _Container1State extends State<Container1> {
             ),
             // width: 100,
             // height: 100,
-            child: Text('dddddddddd'),
           ),
         ),
       ),
