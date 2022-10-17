@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_container/container1.dart';
 
+import 'container2.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -30,7 +32,9 @@ class MyContainer extends StatelessWidget {
         backgroundColor: Colors.teal,
         centerTitle: true,
       ),
-      body: const Containerr(),
+      body: const Container2(),
+      // body: const Containerr(),
+
       // body: ConditionalStatementInChildOrChildren(),
       // body: AAA(),
     );

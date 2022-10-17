@@ -40,10 +40,10 @@ class _ContainerrState extends State<Containerr> {
           // cursor: SystemMouseCursors.click,
           cursor: MouseCursor.defer,
           child: Container(
-            width: MediaQuery.of(context).size.width,
+            // width: MediaQuery.of(context).size.width,
             constraints: BoxConstraints(
               minWidth: 200,
-              maxWidth: 800,
+              maxWidth: 300,
             ),
             decoration: BoxDecoration(
               border: Border.all(
