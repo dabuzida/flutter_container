@@ -24,39 +24,31 @@ class _ContainerrState extends State<Containerr> {
 
   @override
   Widget build(BuildContext context) {
-    print('build5');
-    return Center(
-      child: GestureDetector(
-        onTap: () {
-          _x();
-          if (z == x) {
-            z = y;
-          } else {
-            z = x;
-          }
-          setState(() {});
-        },
-        child: MouseRegion(
-          // cursor: SystemMouseCursors.click,
-          cursor: MouseCursor.defer,
-          child: Container(
-            // width: MediaQuery.of(context).size.width,
-            constraints: BoxConstraints(
-              minWidth: 200,
-              maxWidth: 300,
-            ),
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.green,
-                width: 1,
-              ),
-              color: z,
-            ),
-            // width: 100,
-            // height: 100,
-          ),
+    return Row(
+      children: <Widget>[
+        const RotationTransition(
+          turns: AlwaysStoppedAnimation<double>(45 / 360),
+          child: Text('당나라'),
         ),
-      ),
+        const RotationTransition(
+          turns: AlwaysStoppedAnimation<double>(90 / 360),
+          child: Text('당나라'),
+        ),
+        const RotatedBox(
+          quarterTurns: 0,
+          child: Text('비용[원]'),
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Colors.red.shade100,
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Colors.red[100],
+        ),
+      ],
     );
   }
 }
