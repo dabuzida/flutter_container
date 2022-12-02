@@ -18,10 +18,6 @@ class _ContainerrState extends State<Containerr> {
     z = x;
   }
 
-  void _x() {
-    print('ddd');
-  }
-
   @override
   Widget build(BuildContext context) {
     return Row(
