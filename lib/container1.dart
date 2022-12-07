@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class Containerr extends StatefulWidget {
-  const Containerr({Key? key}) : super(key: key);
+class Container1 extends StatefulWidget {
+  const Container1({Key? key}) : super(key: key);
 
   @override
-  State<Containerr> createState() => _ContainerrState();
+  State<Container1> createState() => _Container1State();
 }
 
-class _ContainerrState extends State<Containerr> {
+class _Container1State extends State<Container1> {
   Color x = Colors.green;
   Color y = Colors.red;
   Color? z;
@@ -22,6 +22,27 @@ class _ContainerrState extends State<Containerr> {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
+        TextButton(
+            onPressed: () async {
+              final bool? x = await showGeneralDialog<bool?>(
+                context: context,
+                pageBuilder: (context, animation, secondaryAnimation) => Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.blue.shade100,
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop(false);
+                    },
+                    child: Text('뒤로가기'),
+                  ),
+                ),
+              );
+              final bool y = x as bool;
+
+              print(y);
+            },
+            child: Text('================')),
         const RotationTransition(
           turns: AlwaysStoppedAnimation<double>(45 / 360),
           child: Text('당나라'),
@@ -43,46 +64,6 @@ class _ContainerrState extends State<Containerr> {
           width: 100,
           height: 100,
           color: Colors.red[100],
-        ),
-        Container(
-          width: 100,
-          height: 100,
-          color: Color(0xFF123456),
-        ),
-        Container(
-          width: 100,
-          height: 100,
-          color: Color(0x00123456),
-        ),
-        Container(
-          width: 100,
-          height: 100,
-          color: Color(0x123456),
-        ),
-        Container(
-          width: 100,
-          height: 100,
-          color: Color(0x123456),
-        ),
-        Container(
-          width: 100,
-          height: 100,
-          color: Color(0xFF000000),
-        ),
-        Container(
-          width: 100,
-          height: 100,
-          color: Color(0x00000000),
-        ),
-        Container(
-          width: 100,
-          height: 100,
-          color: Color(0x000000),
-        ),
-        Container(
-          width: 100,
-          height: 100,
-          color: Color(0x000000),
         ),
       ],
     );
