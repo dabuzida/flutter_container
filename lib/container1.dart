@@ -44,6 +44,46 @@ class _ContainerrState extends State<Containerr> {
           height: 100,
           color: Colors.red[100],
         ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Color(0xFF123456),
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Color(0x00123456),
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Color(0x123456),
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Color(0x123456),
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Color(0xFF000000),
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Color(0x00000000),
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Color(0x000000),
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Color(0x000000),
+        ),
       ],
     );
   }
