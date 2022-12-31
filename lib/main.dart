@@ -40,10 +40,9 @@ class MyContainer extends StatelessWidget {
       // body: BuildTestI(),
       // body: const Container3(),
       // body: const Container2(),
-      body: const Container1(),
-
+      // body: const Container1(),
       // body: ConditionalStatementInChildOrChildren(),
-      // body: AAA(),
+      body: AAA(),
     );
   }
 }
@@ -54,96 +53,10 @@ class AAA extends StatelessWidget {
   bool xx = true;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.purple, width: 2),
-          ),
-          child: (() {
-            if (xx) {
-              return Container(width: 50, height: 50, color: Colors.amber);
-            } else {
-              return Container(width: 50, height: 50, color: Colors.teal);
-            }
-          }()),
-          // child: xx ? Text('sdf') : Text('sdfsdf333'),
-        ),
-        SizedBox(height: 100),
-        Container(
-          constraints: const BoxConstraints(
-            maxWidth: 700,
-            minWidth: 100,
-            maxHeight: 22,
-            minHeight: 11,
-          ),
-          height: 100,
-          // width: MediaQuery.of(context).size.width - 100, // padding: EdgeInsets.symmetric(horizontal: 30),
-          decoration: BoxDecoration(
-            // color: Colors.blue[900],
-            border: Border.all(color: Colors.yellow, width: 5),
-          ),
-          // child: Container(color: Colors.grey),
-        ),
-        Container(
-          width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
-            border: Border(top: BorderSide(color: Colors.black, width: 5.0)),
-          ),
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                border: Border(
-              top: BorderSide(color: Colors.blue, width: 5.0),
-            )),
-          ),
-        ),
-        Container(
-          width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.amber, width: 5),
-          ),
-        ),
-        ConstrainedBox(
-          constraints: BoxConstraints(
-            maxHeight: 300,
-            minHeight: 100,
-            maxWidth: 700,
-            minWidth: 500,
-          ),
-          child: Container(color: Colors.green),
-        ),
-        SizedBox(height: 100),
-        containers(),
-        containers3(),
-        /* Row(
-            children: [
-              Container(
-                // width: 300,
-                height: 100,
-                constraints: const BoxConstraints(
-                  maxWidth: 300,
-                  minWidth: 100,
-                ),
-                // padding: EdgeInsets.only(right: 50),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blue, width: 5),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.purple, width: 5),
-                  ),
-                ),
-              )
-            ],
-          ), */
-      ],
+    return Container(
+      width: 300,
+      height: 170,
+      color: Colors.red.shade100,
     );
   }
 
