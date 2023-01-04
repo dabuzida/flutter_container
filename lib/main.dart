@@ -53,10 +53,13 @@ class AAA extends StatelessWidget {
   bool xx = true;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 300,
-      height: 170,
-      color: Colors.red.shade100,
+    return Center(
+      child: Container(
+          // width: 300,
+          // height: 170,
+          color: Colors.red.shade100,
+          child: Text(
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend leo eu tincidunt pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras vel pretium velit. Vivamus ut placerat dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ante nunc, maximus quis aliquam eu, viverra nec felis. In sed felis nisi. Morbi porta, quam non tristique pharetra, dui mi egestas felis, ornare mollis lorem justo egestas diam. Nam mi lorem, pharetra non viverra in, vehicula et arcu. Etiam libero velit, vulputate vitae augue sagittis, ullamcorper vehicula erat. In hac habitasse platea dictumst.Nullam mattis, nunc eget blandit dapibus, lacus augue dapibus enim, ac viverra ligula velit sed neque. Morbi at dignissim augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed lobortis quis orci at sodales. Maecenas vitae condimentum tellus, viverra pretium urna. Suspendisse potenti. Proin laoreet lacus nec vulputate rhoncus. Nunc vestibulum quam fringilla tortor vehicula, et varius tortor ornare. Phasellus egestas quam pretium odio mollis hendrerit in ut quam. Nullam non nulla sit amet tortor sollicitudin pharetra et non ante. Integer erat mauris, fringilla eu purus sit amet, condimentum laoreet quam. Duis porttitor libero eget odio faucibus sagittis. Mauris fermentum at purus a bibendum. Phasellus dictum lorem ut efficitur euismod.')),
     );
   }
 
