@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_container/container1.dart';
+import 'package:flutter_container/measurable.dart';
 
 import 'build_test/build_test_i.dart';
 import 'container2.dart';
 import 'container3.dart';
+import 'measurable_widget.dart';
+import 'measure_height_length.dart';
 
 void main() {
-  print('main');
   runApp(const MyApp());
 }
 
@@ -15,7 +17,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('MyApp');
     return const MaterialApp(
       title: 'Container',
       home: MyContainer(),
@@ -25,10 +26,9 @@ class MyApp extends StatelessWidget {
 
 class MyContainer extends StatelessWidget {
   const MyContainer({Key? key}) : super(key: key);
-
+  static GlobalKey _globalKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
-    print('MyContainer');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Container'),
@@ -40,9 +40,11 @@ class MyContainer extends StatelessWidget {
       // body: BuildTestI(),
       // body: const Container3(),
       // body: const Container2(),
+      // body: const MeasureHeightLength(),
+      body: Measurable(key: _globalKey),
       // body: const Container1(),
       // body: ConditionalStatementInChildOrChildren(),
-      body: AAA(),
+      // body: AAA(),
     );
   }
 }
