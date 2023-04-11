@@ -9,15 +9,16 @@ class MyLayout extends StatelessWidget {
       color: Colors.cyan[100],
       // alignment: Alignment.center,
       child: Center(
-        child: Container(
-          // width: 500,
-          color: Colors.blueAccent[100],
-          child: Column(
-            children: [
-              Text(
-                'data',
-              ),
-            ],
+        child: GestureDetector(
+          child: MouseRegion(
+            cursor: MouseCursor.defer,
+            // cursor: SystemMouseCursors.click,
+            child: Container(
+              width: 500,
+              height: 500,
+              color: null,
+              child: Text('xxxxxxxxxx'),
+            ),
           ),
         ),
       ),
