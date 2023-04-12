@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TextOverfloww extends StatefulWidget {
-  const TextOverfloww({Key? key}) : super(key: key);
+class GoTextOverflow extends StatefulWidget {
+  const GoTextOverflow({Key? key}) : super(key: key);
 
   @override
-  State<TextOverfloww> createState() => _TextOverflowwState();
+  State<GoTextOverflow> createState() => _GoTextOverflowState();
 }
 
-class _TextOverflowwState extends State<TextOverfloww> {
+class _GoTextOverflowState extends State<GoTextOverflow> {
   final String _short = 'Contrary to popular belief.';
   // final String _long = 'Contrary to popular belief.Lorem Ipsum is not simply random textttasdfgdtextttasdfgdsssssb.';
   final String _long = 'Contrary to popular belief.\nLorem Ipsum is not simply random textttasdfgd.s';

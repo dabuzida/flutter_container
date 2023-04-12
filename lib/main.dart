@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_container/MyLayout.dart';
 import 'package:flutter_container/container1.dart';
 import 'package:flutter_container/measurable.dart';
-import 'package:flutter_container/text_overfloww.dart';
+import 'package:flutter_container/text_overflow_demo.dart';
 
 import 'build_test/build_test_i.dart';
 import 'container2.dart';
 import 'container3.dart';
+import 'go_text_overflow.dart';
 import 'measurable_widget.dart';
 import 'measure_height_length.dart';
 
@@ -45,7 +46,8 @@ class MyContainer extends StatelessWidget {
       // body: const MeasureHeightLength(),
       // body: Measurable(key: _globalKey),
       // body: MyLayout(),
-      body: const TextOverfloww(),
+      // body: const GoTextOverflow(),
+      body: const TextOverflowDemo(),
       // body: const Container1(),
       // body: ConditionalStatementInChildOrChildren(),
       // body: AAA(),
@@ -61,11 +63,13 @@ class AAA extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-          // width: 300,
-          // height: 170,
-          color: Colors.red.shade100,
-          child: Text(
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend leo eu tincidunt pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras vel pretium velit. Vivamus ut placerat dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ante nunc, maximus quis aliquam eu, viverra nec felis. In sed felis nisi. Morbi porta, quam non tristique pharetra, dui mi egestas felis, ornare mollis lorem justo egestas diam. Nam mi lorem, pharetra non viverra in, vehicula et arcu. Etiam libero velit, vulputate vitae augue sagittis, ullamcorper vehicula erat. In hac habitasse platea dictumst.Nullam mattis, nunc eget blandit dapibus, lacus augue dapibus enim, ac viverra ligula velit sed neque. Morbi at dignissim augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed lobortis quis orci at sodales. Maecenas vitae condimentum tellus, viverra pretium urna. Suspendisse potenti. Proin laoreet lacus nec vulputate rhoncus. Nunc vestibulum quam fringilla tortor vehicula, et varius tortor ornare. Phasellus egestas quam pretium odio mollis hendrerit in ut quam. Nullam non nulla sit amet tortor sollicitudin pharetra et non ante. Integer erat mauris, fringilla eu purus sit amet, condimentum laoreet quam. Duis porttitor libero eget odio faucibus sagittis. Mauris fermentum at purus a bibendum. Phasellus dictum lorem ut efficitur euismod.')),
+        // width: 300,
+        // height: 170,
+        color: Colors.red.shade100,
+        child: Text(
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend leo eu tincidunt pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras vel pretium velit. Vivamus ut placerat dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ante nunc, maximus quis aliquam eu, viverra nec felis. In sed felis nisi. Morbi porta, quam non tristique pharetra, dui mi egestas felis, ornare mollis lorem justo egestas diam. Nam mi lorem, pharetra non viverra in, vehicula et arcu. Etiam libero velit, vulputate vitae augue sagittis, ullamcorper vehicula erat. In hac habitasse platea dictumst.Nullam mattis, nunc eget blandit dapibus, lacus augue dapibus enim, ac viverra ligula velit sed neque. Morbi at dignissim augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed lobortis quis orci at sodales. Maecenas vitae condimentum tellus, viverra pretium urna. Suspendisse potenti. Proin laoreet lacus nec vulputate rhoncus. Nunc vestibulum quam fringilla tortor vehicula, et varius tortor ornare. Phasellus egestas quam pretium odio mollis hendrerit in ut quam. Nullam non nulla sit amet tortor sollicitudin pharetra et non ante. Integer erat mauris, fringilla eu purus sit amet, condimentum laoreet quam. Duis porttitor libero eget odio faucibus sagittis. Mauris fermentum at purus a bibendum. Phasellus dictum lorem ut efficitur euismod.',
+        ),
+      ),
     );
   }
 
