@@ -7,6 +7,7 @@ import 'package:flutter_container/text_overflow_demo.dart';
 import 'build_test/build_test_i.dart';
 import 'container2.dart';
 import 'container3.dart';
+import 'container4.dart';
 import 'go_text_overflow.dart';
 import 'measurable_widget.dart';
 import 'measure_height_length.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
 
 class MyContainer extends StatelessWidget {
   const MyContainer({Key? key}) : super(key: key);
-  static GlobalKey _globalKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,8 +48,8 @@ class MyContainer extends StatelessWidget {
       // body: Measurable(key: _globalKey),
       // body: MyLayout(),
       // body: const GoTextOverflow(),
-      body: const TextOverflowDemo(),
-      // body: const Container1(),
+      // body: const TextOverflowDemo(),
+      body: const Container4(),
       // body: ConditionalStatementInChildOrChildren(),
       // body: AAA(),
     );
