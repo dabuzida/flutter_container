@@ -12,6 +12,7 @@ import 'container4.dart';
 import 'go_text_overflow.dart';
 import 'measurable_widget.dart';
 import 'measure_height_length.dart';
+import 'my_intrinsic.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,14 +44,16 @@ class MyContainer extends StatelessWidget {
         centerTitle: true,
       ),
       // body: BuildTestI(),
+      body: const MyIntrinsic(),
       // body: const Container3(),
+
       // body: const Container2(),
       // body: const MeasureHeightLength(),
       // body: Measurable(key: _globalKey),
       // body: MyLayout(),
       // body: const GoTextOverflow(),
       // body: const TextOverflowDemo(),
-      body: const MyScrollController(),
+      // body: const MyScrollController(),
       // body: ConditionalStatementInChildOrChildren(),
       // body: AAA(),
     );

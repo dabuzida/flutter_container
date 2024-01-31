@@ -7,6 +7,39 @@ class Container3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
+        SizedBox(height: 10),
+        Row(
+          children: <Widget>[
+            SizedBox(width: 10),
+            Text('2025년 03월 11일'),
+            SizedBox(width: 10),
+            Text('D-67'),
+            SizedBox(width: 10),
+            ElevatedButton(onPressed: () {}, child: Text('변경')),
+          ],
+        ),
+        SizedBox(height: 10),
+        Row(
+          children: <Widget>[
+            SizedBox(width: 10),
+            Text('2025년 03월 11일'),
+            SizedBox(width: 10),
+            Text('(67일 남음)'),
+            SizedBox(width: 10),
+            ElevatedButton(onPressed: () {}, child: Text('변경')),
+          ],
+        ),
+        SizedBox(height: 10),
+        Row(
+          children: <Widget>[
+            SizedBox(width: 10),
+            Text('2025년 03월 11일'),
+            SizedBox(width: 10),
+            Text('( D - 67 )'),
+            SizedBox(width: 10),
+            ElevatedButton(onPressed: () {}, child: Text('변경')),
+          ],
+        ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
