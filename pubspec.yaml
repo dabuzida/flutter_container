@@ -12,7 +12,8 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-
+  intl: ^0.18.0
+  flutter_treeview: ^1.0.7+1
 dev_dependencies:
   flutter_test:
     sdk: flutter
